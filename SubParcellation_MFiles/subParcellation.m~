@@ -1,0 +1,25 @@
+% Code to create high resolution parcellation with regions of aproximatly
+% the same area
+% Please cite: "Effects of network resolution on topological properties of
+% human neocortex."
+
+% Rafael Romero Garcia 
+% 23 Feb 2018
+% rr480@cam.ac.uk
+% University of Cambridge 
+
+%Requirements
+%Freesurfer needs to be installed
+%Freesurfer libraries (freesurfer/matlab) need to be added to matlab path
+
+%Usage
+% subject= [getenv('SUBJECTS_DIR') 'fsaverage/']; %Path of the subject for subparcellation
+% surface=300;                                                       %Area in mm2 of each parcel
+% subParcellation(subject,surface);
+% Parcellation is based on random seeds so each execution will return a different parcel distribution 
+
+function subParcellation(subject,surface)
+    %subParcellationHemi(subject,surface,'lh')
+    %subParcellationHemi(subject,surface,'rh')
+    display('Subparcellation finished!');
+end

@@ -1,0 +1,20 @@
+function sal=cambioRegion(ind,newLabel),
+ sal=0;
+ if(ind>1)
+ regAnt=newLabel(ind);
+ regAct=newLabel(ind-1);
+ regAct=sprintf('%s',regAct{:});
+ regAnt=sprintf('%s',regAnt{:});
+ numRegAnt=size(regAnt);
+ numRegAct=size(regAct);
+ if(numRegAnt==numRegAct),
+     sal=(regAnt==regAct-1);
+     sal=sal(1,numRegAnt(2));
+ else
+     sal=1;
+ end
+ else
+    sal=1; 
+ end
+ return;
+end
